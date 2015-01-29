@@ -1,0 +1,348 @@
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */	
+}
+
+body {
+	margin:0px;
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+	background-color:#FBF8E8;
+	-webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    -ms-perspective: 1200px;
+    perspective: 1200px;
+}
+/* Portrait layout (default) */
+.app {
+    position:absolute;             /* position in the center of the screen */
+    left:50%;
+    top:50%;
+    height:50px;                   /* text area height */
+    width:225px;                   /* text area width */
+    text-align:center;
+    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
+                                   /* offset horizontal: half of text area width */
+}
+
+/*******************************************************************************************************************************/
+
+.heading{
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight:100;
+	color:#FFFFFF;
+	background-color:#005900;
+	top:0rem;
+	height:2.5rem;
+	width:100%;
+	box-shadow:#808080 0px 1px 1px;
+	padding-top:1.5rem;
+	position:fixed absolute;	
+	z-index:1000;
+}
+
+#loginPage{
+	width:100%;
+}
+	
+#loginPage h2{
+	font-size:1.2rem;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight:300;
+	color:#FFFFFF;
+	background-color:#008000;
+	padding-top:1rem;
+	padding-bottom:1rem;
+	margin-top:4rem;
+	width:80%;
+	-webkit-box-shadow: 0px 6px 5px 0px rgba(112,112,112,0.71);
+	-moz-box-shadow: 0px 6px 5px 0px rgba(112,112,112,0.71);
+	box-shadow: 0px 6px 5px 0px rgba(112,112,112,0.71);
+	}
+	
+.NameForm{
+	background-color:#FEFFF7;
+	height:8rem;
+	width:80%;
+	margin:0 auto;
+	margin-top:-1.2rem;
+	padding-top:1.2rem;
+	-webkit-box-shadow: 0px 6px 5px 0px rgba(112,112,112,0.71);
+   -moz-box-shadow: 0px 6px 5px 0px rgba(112,112,112,0.71);
+	box-shadow: 0px 6px 5px 0px rgba(112,112,112,0.71);
+	transition: all 2s linear;
+	-webkit-transition: all 2s linear;
+	-moz-transition:all 2s linear;
+	-o-transition:all 2s linear;
+	-ms-transition:all 2s linear;
+    -webkit-animation-name: expanding;
+    -webkit-animation-duration: 0.5s;
+	 transition: all 4s;
+     animation-name: expanding;
+     animation-duration: 0.5s;
+}
+@-o-keyframes expanding {
+      from {opacity: 0; height:0rem;}
+      to { opacity: 1; height:13rem; }
+}
+@-ms-keyframes expanding {
+    from {opacity: 0; height:0rem;}
+      to { opacity: 1; height:13rem; }
+}
+@-moz-keyframes expanding {
+     from {opacity: 0; height:0rem;}
+      to { opacity: 1; height:13rem; }
+}
+@-webkit-keyframes expanding {
+      from {opacity: 0; height:0rem;}
+      to { opacity: 1; height:13rem; }
+}
+@keyframes expanding {
+     from {opacity: 0; height:0rem;}
+      to { opacity: 1; height:13rem; }
+}
+	
+.NameForm input{
+	width:13rem;
+	height:2rem;
+	outline:none;
+	background-color:#FFFDF1;
+	border-top:none;
+	border-left:none;
+	border-right:none;
+	border-top:#BEBEBE solid 1px;
+	border-bottom:#BEBEBE solid 1px;
+	border-left:#BEBEBE solid 1px;
+	border-right:#BEBEBE solid 1px;
+	font-size:1rem;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight:300;
+}	
+	
+#registerbtn{
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight:200;
+	font-size:1.2rem;
+	color:#FFFFFF;
+	margin-top:1.4rem;
+	padding-top:0.5rem;
+	background-color:#333333;
+	border:none;
+	width:8rem;
+	height:2rem;
+	outline:none;
+}	
+	
+::-webkit-input-placeholder {
+   color:#515151;
+   font-size:1rem;
+   padding-top:0.3rem;
+   padding-left:0.2rem;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color:#515151;  
+   font-size:1rem;
+   padding-top:0.3rem;
+   padding-left:0.2rem;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color:#515151; 
+   font-size:1rem;
+   padding-top:0.3rem;
+   padding-left:0.2rem;
+}
+
+:-ms-input-placeholder {  
+   color:#515151;  
+   font-size:1rem;
+   padding-top:0.3rem;
+   padding-left:0.2rem;
+}
+
+.notification{
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight:300;
+	color:#FFFFFF;
+	margin-top:0rem;
+	margin-bottom:0.8rem;
+	background-color:#c30006;
+	height:30%;
+	padding-top:0.5rem;
+	padding-left:1.5rem;
+	padding-bottom:1rem;
+	transition: all 2s linear;
+	-webkit-transition: all 2s linear;
+	-moz-transition:all 2s linear;
+	-o-transition:all 2s linear;
+	-ms-transition:all 2s linear;
+    -webkit-animation-name:noti;
+    -webkit-animation-duration: 0.5s; 
+	 transition: all 4s;
+     animation-name: noti;
+     animation-duration: 0.5s;
+	  animation-delay:0s;
+}
+@-o-keyframes noti {
+         from {opacity: 0; transform:rotateX(1080deg); }
+      to { opacity: 1; transform:rotateX(0deg) ; }
+}
+@-ms-keyframes noti {
+        from {opacity: 0; transform:rotateX(1080deg); }
+      to { opacity: 1; transform:rotateX(0deg) ; }
+}
+@-moz-keyframes noti {
+        from {opacity: 0; transform:rotateX(1080deg); }
+      to { opacity: 1; transform:rotateX(0deg) ; }
+}
+@-webkit-keyframes noti {
+     from {opacity: 0; transform:rotateX(1080deg); }
+      to { opacity: 1; transform:rotateX(0deg) ; }
+}
+@keyframes noti {
+     from {opacity: 0; transform:rotateX(1080deg); }
+      to { opacity: 1; transform:rotateX(0deg) ; }
+}
+	
+	
+/*******************************************************************************************************************************/
+
+#welcomepages{
+	width:100%;
+}
+
+.loginUsername{
+	font-size:1.2rem;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight:300;
+	color:#FFFFFF;
+	background-color:#008000;
+    width:80%;
+	padding-left:1.3rem;
+	padding-right:1.3rem;
+	padding-top:0.8rem;
+	padding-bottom:0.8rem;
+	margin:0 auto;
+	margin-top:4rem;
+	-webkit-box-shadow: 0px 6px 5px 0px rgba(112,112,112,0.71);
+   -moz-box-shadow: 0px 6px 5px 0px rgba(112,112,112,0.71);
+    box-shadow: 0px 6px 5px 0px rgba(112,112,112,0.71);
+}
+
+#mainPageList{
+    text-align:center;
+	font-size:1rem;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight:300;
+	color:#474747;
+	background-color:#FEFFF7;
+	margin:0 auto;
+	margin-top:0rem;
+	width:80%;
+	-webkit-box-shadow: 0px 6px 5px 0px rgba(112,112,112,0.71);
+   -moz-box-shadow: 0px 6px 5px 0px rgba(112,112,112,0.71);
+    box-shadow: 0px 6px 5px 0px rgba(112,112,112,0.71);
+}	
+
+#mainPageList li{
+	border-bottom:1px solid rgba(0,0,0,0.3);
+	margin-top:0rem;
+	margin-left:-2.5rem;	
+	padding-bottom:1rem;
+	padding-top:1rem;		
+	transition: all 2s linear;
+	-webkit-transition: all 2s linear;
+	-moz-transition:all 2s linear;
+	-o-transition:all 2s linear;
+	-ms-transition:all 2s linear;
+    -webkit-animation-name: expanding2;
+    -webkit-animation-duration: 0.8s; 
+	 transition: all 4s;
+     animation-name: expanding;
+     animation-duration: 0.8s;
+}
+		
+@-o-keyframes expanding2 {
+       from { transform:rotateX(90deg) ; }
+      to {transform:rotateX(0deg) ; }
+}
+@-ms-keyframes expanding2 {
+      from { transform:rotateX(90deg) ; }
+      to {transform:rotateX(0deg) ; }
+}
+@-moz-keyframes expanding2 {
+      from { transform:rotateX(90deg) ; }
+      to {transform:rotateX(0deg) ; }
+}
+@-webkit-keyframes expanding2 {
+      from { transform:rotateX(90deg) ; }
+      to {transform:rotateX(0deg) ; }
+}
+@keyframes expanding2 {
+     from { transform:rotateX(90deg) ; }
+      to {  transform:rotateX(0deg) ; }
+}
+
+#mainPageList li p{
+	font-size:0.8rem;
+	width:15rem;
+	margin-left:1.5rem;
+}	
+	
+/*******************************************************************************************************************************/
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+.app {
+	background-position:left center;
+	padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+	margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+}
+}
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
